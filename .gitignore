@@ -1,1 +1,6 @@
-.DS_Store
+/*
+!/.gitignore
+!/index.html
+!/images
+/images/*
+!/images/harika-portrait.jpg

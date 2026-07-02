@@ -101,16 +101,16 @@ p:last-child { margin-bottom: 0; }
 
 /* Hero */
 .hero { padding: 92px 0 100px; }
+.hero-row {
+    display: grid; grid-template-columns: 1fr 210px;
+    gap: 48px; align-items: start;
+}
 .hero-sub {
     font-size: 21px; line-height: 1.55; color: var(--soft);
     max-width: 620px; font-weight: 300;
 }
 
 /* About */
-.about-grid {
-    display: grid; grid-template-columns: 1fr 230px;
-    gap: 52px; align-items: start;
-}
 .about-body p { color: var(--ink); margin-bottom: 20px; }
 .about-body p:last-child {
     font-family: 'Instrument Serif', serif;
@@ -123,10 +123,6 @@ p:last-child { margin-bottom: 0; }
 .portrait img {
     display: block; width: 100%; height: auto;
     filter: grayscale(0.12) contrast(1.02);
-}
-.portrait-cap {
-    margin-top: 12px; font-size: 12px; letter-spacing: 0.06em;
-    color: var(--muted); text-transform: uppercase;
 }
 
 /* Principles */
@@ -196,8 +192,8 @@ footer { border-top: 1px solid var(--line); padding: 26px 0; }
 @media (max-width: 680px) {
     section { padding: 72px 0; }
     .hero { padding: 64px 0 72px; }
-    .about-grid { grid-template-columns: 1fr; gap: 36px; }
-    .portrait { max-width: 240px; order: -1; }
+    .hero-row { grid-template-columns: 1fr; gap: 36px; }
+    .portrait { max-width: 240px; }
     .role { grid-template-columns: 1fr; gap: 6px; }
     .role .yr { padding-top: 0; }
     .nav-links { gap: 18px; }
@@ -227,7 +223,12 @@ footer { border-top: 1px solid var(--line); padding: 26px 0; }
     <div class="wrap">
         <p class="label">Product Leader / Melbourne</p>
         <h1>Product is the <em>whole equation</em>, not a function.</h1>
-        <p class="hero-sub">Growth, margin, retention, and the experience itself all pull against each other. The job is to hold them in one decision and own the trade-offs. I've done that for 17 years, across healthcare, retail, and SaaS.</p>
+        <div class="hero-row">
+            <p class="hero-sub">Growth, margin, retention, branding, the customer's reality. The job is to hold them in one decision and own the trade-offs. I've done that for 17 years, across insurance, fintech, retail, and care, in both B2B SaaS and B2C.</p>
+            <div class="portrait">
+                <img src="images/harika-portrait.jpg" alt="Portrait of Harika Mamidi">
+            </div>
+        </div>
     </div>
 </section>
 
@@ -235,18 +236,10 @@ footer { border-top: 1px solid var(--line); padding: 26px 0; }
 <section id="about">
     <div class="wrap">
         <p class="label"><span class="num">01</span> / About</p>
-        <div class="about-grid">
-            <div class="about-body">
-                <p>I'm a product leader with an engineering background and 17 years across healthcare, retail, fintech, and SaaS. I've led a 100-person org. I've shipped products with no design support. I've presented strategy to a CEO and CFO, and I've sat with engineers to work through a problem.</p>
-                <p>Most companies run product as a delivery function: a queue of features to ship. I've never seen it that way. Product is where the commercial bet meets the customer's reality, and someone has to hold both at once and own what each trade-off costs. Most orgs split that across teams. The good ones don't.</p>
-                <p>That's the work.</p>
-            </div>
-            <div>
-                <div class="portrait">
-                    <img src="images/harika-portrait.jpg" alt="Portrait of Harika Mamidi">
-                </div>
-                <p class="portrait-cap">Harika Mamidi / Melbourne, VIC</p>
-            </div>
+        <div class="about-body">
+            <p>I'm a generalist product leader who holds the whole business in every product decision. My background is engineering, and over 17 years I've worked across the table from nearly every seat that shapes a product. I've built the technology, owned the commercial number, and carried strategy into rooms with CEOs and boards. That range is the point: when I make a call, I'm reading the whole business at once, from the code to the P&amp;L.</p>
+            <p>I build the team as deliberately as I build the product, because a product is only ever as good as the organisation shipping it. I've grown and led product organisations, coached managers into genuine owners, and shaped how teams work so they move fast and still decide well. My way of leading is to walk people to the decision rather than hand it down. A call someone reaches on their own outlasts any instruction. The end state I'm after is a team that doesn't need me. I don't see that as a loss. It means the work holds, the people own it, and I'm ready for the next place I can grow.</p>
+            <p>Outside of work: a good book, a sudoku, some nature, a museum.</p>
         </div>
     </div>
 </section>
@@ -256,7 +249,7 @@ footer { border-top: 1px solid var(--line); padding: 26px 0; }
     <div class="wrap">
         <p class="label"><span class="num">02</span> / Approach</p>
         <h2>How I think.</h2>
-        <p class="section-intro">Three convictions, and the calls that earned them.</p>
+        <p class="section-intro">Four convictions, and the calls that earned them.</p>
 
         <div class="principle">
             <p class="pnum">01</p>
@@ -287,6 +280,16 @@ footer { border-top: 1px solid var(--line); padding: 26px 0; }
                 <p>Leading HighRadius's ANZ market entry, the numbers read as underperformance against US and EU targets. The real cause was different: enterprise cycles in a new market run longer. I closed <strong>$530K solo</strong>, and the <strong>$1M+ pipeline</strong> I left behind closed after I'd gone. The surface number and the real story were never the same thing.</p>
             </div>
         </div>
+
+        <div class="principle">
+            <p class="pnum">04</p>
+            <h3>Strategy is what people decide when you're not in the room.</h3>
+            <p>A strategy that lives in a deck is decoration. The test is whether an engineer, a designer, and a PM, none of them in your meetings, make the same call you would have made. That takes a north star people can use, not admire.</p>
+            <div class="evidence">
+                <span class="tag">In practice</span>
+                <p>At WooliesX I led a <strong>100-person</strong> mobile org. The north star was one line: make mobile the front door to Woolworths. It changed how squads prioritised, how the business allocated resources, and how <strong>10 PMs</strong> grew from a BA mindset into genuine owners. Scan &amp; Pay launched at scale on that spine.</p>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -297,11 +300,11 @@ footer { border-top: 1px solid var(--line); padding: 26px 0; }
         <h2>Where I've done the work.</h2>
 
         <div class="role">
-            <div class="yr">2024 — present</div>
+            <div class="yr">2024 — 2025</div>
             <div>
                 <h3>Head of Product</h3>
-                <p class="co">Hayylo / B2B SaaS</p>
-                <p class="desc">Lead product and design across three portfolios under tight resource constraints. Own prioritisation and the hard trade-off calls. Building OKRs and modern portfolio practices.</p>
+                <p class="co">Hayylo / B2B SaaS, Aged Care</p>
+                <p class="desc">Led product and design across three portfolios. Built the strategy function and brought leadership to consensus on priorities. Paused a flagship app build to ship what customers were asking for, including a feature <strong>seven years</strong> in the backlog that won back a churned customer at <strong>$100K ARR</strong>.</p>
             </div>
         </div>
 

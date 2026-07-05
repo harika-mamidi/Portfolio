@@ -114,12 +114,20 @@ p:last-child { margin-bottom: 0; }
     text-transform: uppercase; color: var(--muted);
 }
 .case .sum { color: var(--ink); }
-.shot {
+.case-box {
+    background: var(--paper);
     border: 1px solid var(--line);
-    background: var(--paper); padding: 8px; border-radius: 2px;
-    margin-top: 28px;
+    border-radius: 6px;
+    padding: 40px;
+    display: grid; grid-template-columns: 1fr 220px;
+    gap: 40px; align-items: center;
 }
-.shot img { display: block; width: 100%; height: auto; }
+.case-box .label { margin-bottom: 16px; }
+.phone img {
+    display: block; width: 100%; height: auto;
+    -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+}
 
 /* Back strip */
 .back { padding: 56px 0 92px; border-bottom: none; }
@@ -141,6 +149,8 @@ footer { border-top: 1px solid var(--line); padding: 26px 0; }
     .metrics { gap: 26px; }
     .metric b { font-size: 28px; }
     .nav-section { display: none; }
+    .case-box { grid-template-columns: 1fr; padding: 26px; gap: 28px; }
+    .phone { max-width: 220px; }
 }
 </style>
 </head>
@@ -184,16 +194,20 @@ footer { border-top: 1px solid var(--line); padding: 26px 0; }
 <!-- Bupa -->
 <section id="bupa" class="case">
     <div class="wrap">
-        <p class="label">Bupa Australia / Healthcare / 2016 — 2020</p>
-        <h2>Don't migrate what no longer matters.</h2>
-        <div class="metrics">
-            <div class="metric"><b>2.0 to 4.7</b><span>App store rating</span></div>
-            <div class="metric"><b>+300% YoY</b><span>Digital traffic</span></div>
-            <div class="metric"><b>$1M+</b><span>Operational savings</span></div>
-        </div>
-        <p class="sum">Four million members, a dated estate, and a like-for-like brief. Once I had earned the trust, I reframed it: don't migrate what no longer matters. Rebuilt the website and app on new technology, and gave members visibility of their remaining benefits. That work was nominated for Bupa's global awards.</p>
-        <div class="shot">
-            <img src="images/case/mybupa-extras-usage.webp" alt="myBupa app extras usage screen showing remaining benefit limits by category">
+        <div class="case-box">
+            <div>
+                <p class="label">Bupa Australia / Healthcare / 2016 — 2020</p>
+                <h2>Don't migrate what no longer matters.</h2>
+                <div class="metrics">
+                    <div class="metric"><b>2.0 to 4.7</b><span>App store rating</span></div>
+                    <div class="metric"><b>+300% YoY</b><span>Digital traffic</span></div>
+                    <div class="metric"><b>$1M+</b><span>Operational savings</span></div>
+                </div>
+                <p class="sum">Four million members, a dated estate, and a like-for-like brief. Once I had earned the trust, I reframed it: don't migrate what no longer matters. Rebuilt the website and app on new technology, and gave members visibility of their remaining benefits. That work was nominated for Bupa's global awards.</p>
+            </div>
+            <div class="phone">
+                <img src="images/case/mybupa-phone.png" alt="myBupa app extras usage screen in an iPhone, showing remaining benefit limits by category">
+            </div>
         </div>
     </div>
 </section>

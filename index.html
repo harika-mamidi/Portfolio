@@ -116,13 +116,10 @@ p:last-child { margin-bottom: 0; }
     font-family: 'Instrument Serif', serif;
     font-size: 24px; color: var(--head); margin-top: 4px;
 }
-.portrait {
-    border: 1px solid var(--line);
-    background: var(--paper); padding: 8px; border-radius: 2px;
-}
-.portrait img {
+.cutout img {
     display: block; width: 100%; height: auto;
-    filter: grayscale(0.12) contrast(1.02);
+    -webkit-mask-image: linear-gradient(to bottom, black 82%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 82%, transparent 100%);
 }
 
 /* Principles */
@@ -245,7 +242,7 @@ footer {
     section { padding: 72px 0; }
     .hero { padding: 64px 0 72px; }
     .hero-row { grid-template-columns: 1fr; gap: 36px; }
-    .portrait { max-width: 240px; }
+    .cutout { max-width: 240px; }
     .role { grid-template-columns: 1fr; gap: 6px; }
     .role .yr { padding-top: 0; }
     .nav-links { gap: 18px; }
@@ -278,8 +275,8 @@ footer {
         <h1>Product is the <em>whole equation</em>, not a function.</h1>
         <div class="hero-row">
             <p class="hero-sub">Growth, margin, retention, branding, the customer's reality. The job is to hold them in one decision and own the trade-offs. I've done that for 17 years, across insurance, fintech, retail, and care, in both B2B SaaS and B2C.</p>
-            <div class="portrait">
-                <img src="images/harika-portrait.jpg" alt="Portrait of Harika Mamidi">
+            <div class="cutout">
+                <img src="images/harika-cutout.png" alt="Portrait of Harika Mamidi">
             </div>
         </div>
     </div>

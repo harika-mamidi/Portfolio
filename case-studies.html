@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Studies, Harika Mamidi</title>
+<meta name="description" content="Three pieces of product work: the outcomes, and a short story behind each. Hayylo, Bupa, and HighRadius ANZ.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    --bg: #F7F5F0;
+    --paper: #FCFBF8;
+    --head: #1A1815;
+    --ink: #2A2620;
+    --soft: #635E55;
+    --muted: #9A948A;
+    --line: #E4DFD4;
+    --line-soft: #ECE8DE;
+    --accent: #C0492A;
+    --accent-ink: #A23B20;
+    --max: 760px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::selection { background: var(--accent); color: var(--paper); }
+
+a { color: var(--accent); text-decoration: none; }
+.ext-link::after { content: "↗"; margin-left: 5px; font-size: 0.9em; }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
+
+/* Nav */
+nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(247,245,240,0.82);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+    max-width: var(--max); margin: 0 auto; padding: 18px 28px;
+    display: flex; justify-content: space-between; align-items: baseline;
+}
+.brand {
+    font-family: 'Instrument Serif', serif;
+    font-size: 21px; color: var(--head); letter-spacing: 0.01em;
+    white-space: nowrap;
+}
+.nav-links { display: flex; gap: 26px; }
+.nav-links a {
+    font-size: 14px; color: var(--soft); font-weight: 400;
+    transition: color 0.15s;
+}
+.nav-links a:hover { color: var(--accent); }
+
+/* Sections */
+section { padding: 84px 0; border-top: 1px solid var(--line); }
+section:first-of-type { border-top: none; }
+section[id] { scroll-margin-top: 76px; }
+
+.label {
+    font-size: 12px; font-weight: 500; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--muted);
+    margin-bottom: 22px;
+}
+
+h1, h2 {
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400; color: var(--head);
+}
+h1 {
+    font-size: clamp(40px, 6vw, 60px);
+    line-height: 1.05; margin-bottom: 22px;
+}
+h2 {
+    font-size: clamp(28px, 4vw, 38px);
+    line-height: 1.1; margin-bottom: 20px;
+}
+
+p { margin-bottom: 18px; }
+p:last-child { margin-bottom: 0; }
+
+/* Intro */
+.intro { padding: 76px 0 84px; }
+.intro-sub { font-size: 20px; line-height: 1.55; color: var(--soft); font-weight: 300; }
+
+/* Case blocks */
+.metrics {
+    display: flex; flex-wrap: wrap; gap: 44px;
+    margin: 4px 0 26px;
+}
+.metric b {
+    display: block;
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400; font-size: 34px; line-height: 1.1;
+    color: var(--accent-ink); margin-bottom: 4px;
+}
+.metric span {
+    font-size: 12px; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--muted);
+}
+.case .sum { color: var(--ink); }
+.shot {
+    border: 1px solid var(--line);
+    background: var(--paper); padding: 8px; border-radius: 2px;
+    margin-top: 28px;
+}
+.shot img { display: block; width: 100%; height: auto; }
+
+/* Back strip */
+.back { padding: 56px 0 92px; border-bottom: none; }
+.back a { font-size: 15px; font-weight: 500; }
+
+/* Footer */
+footer { border-top: 1px solid var(--line); padding: 26px 0; }
+.foot-inner {
+    max-width: var(--max); margin: 0 auto; padding: 0 28px;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    font-size: 13px; color: var(--muted); letter-spacing: 0.04em;
+}
+.foot-inner a { color: var(--muted); }
+.foot-inner a:hover { color: var(--accent); }
+
+@media (max-width: 680px) {
+    section { padding: 60px 0; }
+    .intro { padding: 56px 0 60px; }
+    .metrics { gap: 26px; }
+    .metric b { font-size: 28px; }
+    .nav-section { display: none; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="index.html" class="brand">Harika Mamidi</a>
+        <div class="nav-links">
+            <a href="index.html#about" class="nav-section">About</a>
+            <a href="index.html#approach" class="nav-section">Approach</a>
+            <a href="index.html#experience" class="nav-section">Experience</a>
+            <a href="https://www.linkedin.com/in/harika-mamidi/" target="_blank" rel="noopener" class="ext-link">LinkedIn</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Intro -->
+<section class="intro">
+    <div class="wrap">
+        <p class="label">Case studies</p>
+        <h1>Three pieces of work.</h1>
+        <p class="intro-sub">Numbers first, and a short story behind each. Enough to get a feel for the work.</p>
+    </div>
+</section>
+
+<!-- Hayylo -->
+<section id="hayylo" class="case">
+    <div class="wrap">
+        <p class="label">Hayylo / B2B SaaS, Aged Care / 2024 — 2025</p>
+        <h2>The app I saved, then paused.</h2>
+        <div class="metrics">
+            <div class="metric"><b>7 years</b><span>Backlog feature shipped</span></div>
+            <div class="metric"><b>$100K ARR</b><span>Churned customer won back</span></div>
+            <div class="metric"><b>0</b><span>Questions from 15 experts</span></div>
+        </div>
+        <p class="sum">I rescued the app's design work until a room of fifteen experts had zero questions for the vision. Then the weeds changed my mind: customers needed fixes, not a new platform. I paused the rebuild I had just saved and shipped the feature seven years in the backlog. The churned customer came back.</p>
+    </div>
+</section>
+
+<!-- Bupa -->
+<section id="bupa" class="case">
+    <div class="wrap">
+        <p class="label">Bupa Australia / Healthcare / 2016 — 2020</p>
+        <h2>Don't migrate what no longer matters.</h2>
+        <div class="metrics">
+            <div class="metric"><b>2.0 to 4.7</b><span>App store rating</span></div>
+            <div class="metric"><b>+300% YoY</b><span>Digital traffic</span></div>
+            <div class="metric"><b>$1M+</b><span>Operational savings</span></div>
+        </div>
+        <p class="sum">Four million members, a dated estate, and a like-for-like brief. Once I had earned the trust, I reframed it: don't migrate what no longer matters. Rebuilt the website and app on new technology, and gave members visibility of their remaining benefits. That work was nominated for Bupa's global awards.</p>
+        <div class="shot">
+            <img src="images/case/mybupa-extras-usage.webp" alt="myBupa app extras usage screen showing remaining benefit limits by category">
+        </div>
+    </div>
+</section>
+
+<!-- HighRadius ANZ -->
+<section id="highradius" class="case">
+    <div class="wrap">
+        <p class="label">HighRadius / US Fintech / 2022 — 2024</p>
+        <h2>One seat, a whole market.</h2>
+        <div class="metrics">
+            <div class="metric"><b>$530K</b><span>Closed solo, full price</span></div>
+            <div class="metric"><b>$1M+</b><span>Matured at budget approval</span></div>
+            <div class="metric"><b>2 years</b><span>Market from zero</span></div>
+        </div>
+        <p class="sum">Rehired nine years after my first stint to open ANZ from zero: one seat across product, marketing, and sales. I held full price on the market's first deal against internal pressure to discount, and read the region's pace against imported targets. The buyers I left at budget approval called me after I had gone, and closed.</p>
+    </div>
+</section>
+
+<!-- Back -->
+<section class="back">
+    <div class="wrap">
+        <a href="index.html">&larr; Back to the main page</a>
+    </div>
+</section>
+
+<footer>
+    <div class="foot-inner">
+        <span>Harika Mamidi / Melbourne, VIC</span>
+        <a href="https://www.linkedin.com/in/harika-mamidi/" target="_blank" rel="noopener" class="ext-link">LinkedIn</a>
+    </div>
+</footer>
+
+</body>
+</html>

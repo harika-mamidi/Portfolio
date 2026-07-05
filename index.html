@@ -40,6 +40,7 @@ body {
 ::selection { background: var(--accent); color: var(--paper); }
 
 a { color: var(--accent); text-decoration: none; }
+.ext-link::after { content: "↗"; margin-left: 5px; font-size: 0.9em; }
 
 .wrap { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
 
@@ -223,7 +224,7 @@ footer { border-top: 1px solid var(--line); padding: 26px 0; }
             <a href="#about" class="nav-section">About</a>
             <a href="#approach" class="nav-section">Approach</a>
             <a href="#experience" class="nav-section">Experience</a>
-            <a href="https://www.linkedin.com/in/harika-mamidi/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/harika-mamidi/" target="_blank" rel="noopener" class="ext-link">LinkedIn</a>
         </div>
     </div>
 </nav>
@@ -272,7 +273,7 @@ footer { border-top: 1px solid var(--line); padding: 26px 0; }
                 <p>Every business runs on compromises. Tech debt, a scaling shortcut, a rough edge in the UX. None of those are the problem. Taking them on without naming the cost is. A shortcut decided with eyes open and a payback plan is leverage. The same shortcut taken by accident is damage you haven't found yet.</p>
                 <div class="evidence">
                     <span class="tag">In practice</span>
-                    <p>I was brought into Bupa for a like-for-like migration: no new features, a nervous leadership team, a hard deadline. I reframed it. I descoped low-usage features on purpose, named that trade-off to stakeholders, and put the saved time into what customers actually used. The app went from <strong>2.0 to 4.7 stars</strong> and delivered <strong>$1M+ in operational savings</strong>.</p>
+                    <p>I was brought into Bupa for a like-for-like migration: no new features, a nervous leadership team, a hard deadline. Once I'd earned the trust, I reframed the brief: don't move what's no longer meaningful onto new technology. I descoped legacy features with consensus and put the capacity into what customers actually used, sparing the business a second rebuild soon after. The app went from <strong>2.0 to 4.7 stars</strong> and delivered <strong>$1M+ in operational savings</strong>.</p>
                 </div>
             </div>
         </details>
@@ -300,7 +301,7 @@ footer { border-top: 1px solid var(--line); padding: 26px 0; }
                 <p>Data tells you what happened, not why. The job is to find the actual cause, even when the surface reading is easier to act on.</p>
                 <div class="evidence">
                     <span class="tag">In practice</span>
-                    <p>Leading HighRadius's ANZ market entry, the numbers read as underperformance against US and EU targets. The real cause was different: enterprise cycles in a new market run longer. I closed <strong>$530K solo</strong>, and the <strong>$1M+ pipeline</strong> I left behind closed after I'd gone. The surface number and the real story were never the same thing.</p>
+                    <p>Leading HighRadius's ANZ market entry, the numbers read as underperformance against US and EU targets. The real cause was different: enterprise cycles in a new market run longer. I closed <strong>$530K revenue ($300K ARR)</strong> solo, and the <strong>$1M+ ($750K ARR)</strong> I left at budget approval closed after I'd gone. The surface number and the real story were never the same thing.</p>
                 </div>
             </div>
         </details>
@@ -346,16 +347,16 @@ footer { border-top: 1px solid var(--line); padding: 26px 0; }
             <div>
                 <h3>Head of Product</h3>
                 <p class="co">Hayylo / B2B SaaS, Aged Care</p>
-                <p class="desc">Led product and design across three portfolios. Built the strategy function and brought leadership to consensus on priorities. Paused a flagship app build to ship what customers were asking for, including a feature <strong>seven years</strong> in the backlog that won back a churned customer at <strong>$100K ARR</strong>.</p>
+                <p class="desc">Led product, strategy, and design across three portfolios. Changed the ways of working from services thinking to product thinking: custom wins for one customer cost the capacity to build what the whole market will buy. Paused the app rebuild on a new tech stack when the data said it wasn't what the business needed most in the short term. Channeled that capacity into what was, including a feature <strong>seven years</strong> in the backlog that won back a churned customer at <strong>$100K ARR</strong>.</p>
             </div>
         </div>
 
         <div class="role">
             <div class="yr">2022 — 2024</div>
             <div>
-                <h3>Associate Director</h3>
+                <h3>Associate Director, ANZ</h3>
                 <p class="co">HighRadius / US Fintech</p>
-                <p class="desc">Sole ANZ representative across product, marketing, and sales, two of which I'd never done. Closed <strong>$530K solo</strong>. Left <strong>$1M+ in pipeline</strong> that closed after I'd gone.</p>
+                <p class="desc">Ground-up market launch: no brand presence, no leads, long enterprise sales cycles. One seat, three functions: product, marketing, and sales. Two years later: <strong>$530K revenue ($300K ARR)</strong> closed solo, <strong>$1M+ ($750K ARR)</strong> at budget approval. After I'd gone, those buyers called me; I connected them to the right people, and the deals closed.</p>
             </div>
         </div>
 
@@ -364,7 +365,7 @@ footer { border-top: 1px solid var(--line); padding: 26px 0; }
             <div>
                 <h3>Lead Product Manager, Design &amp; Product</h3>
                 <p class="co">Target Australia / Wesfarmers</p>
-                <p class="desc">Owned product and design strategy for omnichannel and the Wesfarmers OnePass loyalty program. Presented strategy to the CEO and CFO. Delivered <strong>$2.2M</strong> through Target Shop+ and grew mobile sales <strong>40% YoY</strong>.</p>
+                <p class="desc">Started with the loyalty foundations: compared app, digital, and in-store sales, mapped who shopped where, and worked out how to grow cross-channel engagement. Launched Target Shop+ as a trial program to bring in-store shoppers online, designed around the limits of legacy in-store tech. When Wesfarmers created OnePass, I was asked to represent Target: shaped the overall design and presented it to the board. Shop+ delivered <strong>$2.2M</strong> and mobile sales grew <strong>40% YoY</strong>.</p>
             </div>
         </div>
 
@@ -373,7 +374,7 @@ footer { border-top: 1px solid var(--line); padding: 26px 0; }
             <div>
                 <h3>Head of Mobile Product</h3>
                 <p class="co">WooliesX / Woolworths Group</p>
-                <p class="desc">Led a <strong>100-person</strong> mobile org with 10 PMs. Set the north star: make mobile the front door to Woolworths. Architected the team for scale and launched Scan &amp; Pay.</p>
+                <p class="desc">Joined as a Senior PM for the insurance portfolio. In my first two months I coached two high-potential BAs into product owners and reset the portfolio's three-year priorities with key stakeholders aligned. Seeing how I operated, my manager moved me to lead all retail mobile apps through the COVID surge: a <strong>100-person</strong> org with <strong>10 PMs</strong> across the Woolworths mobile app, Everyday Rewards, and Scan &amp; Pay. Shaped the Spotify model, led the Mobile Chapter, and grew POs into PMs who could hold strategy.</p>
             </div>
         </div>
 
@@ -382,7 +383,7 @@ footer { border-top: 1px solid var(--line); padding: 26px 0; }
             <div>
                 <h3>Digital Product Manager</h3>
                 <p class="co">Bupa Australia / Healthcare</p>
-                <p class="desc">Led the largest customer-facing portfolio, <strong>4M+ customers</strong>, through a Scaled Agile transformation. App rating <strong>2.0 to 4.7</strong>. Digital traffic <strong>+300% YoY</strong>. $1M+ in operational savings.</p>
+                <p class="desc">Bupa's digital estate was dated: a non-responsive website and an app that embedded it. I was brought in to rebuild both for <strong>4M+ members</strong>. Relaunched the website and app on new technology: app rating <strong>2.0 to 4.7</strong>, digital traffic <strong>+300% YoY</strong>, $1M+ in operational savings. Then moved from platforms to value: gave members visibility of their remaining benefits, making the case that preventative claims prevent the big ones later. Launched the Bupa digital membership card.</p>
             </div>
         </div>
 
@@ -391,7 +392,7 @@ footer { border-top: 1px solid var(--line); padding: 26px 0; }
             <div>
                 <h3>Solutions Architect &amp; Product Manager</h3>
                 <p class="co">HighRadius / US Fintech</p>
-                <p class="desc">Built a payments gateway for the US market as a solo developer.</p>
+                <p class="desc">Hands-on developer: built a payments gateway solo for the US B2B market. Led the payments innovation stream and expanded the SAP payments integration into its own product line, EIPP (electronic invoice presentment and payment). Explored a QuickBooks integration alongside. Startup mindset, US clients, whatever role the stage needed.</p>
             </div>
         </div>
     </div>
@@ -402,15 +403,15 @@ footer { border-top: 1px solid var(--line); padding: 26px 0; }
     <div class="wrap">
         <p class="label">Let's talk</p>
         <h2>If this resonates, reach out.</h2>
-        <p>I'm not looking for just any role. I'm looking for the right one. Where product is taken seriously, the team is genuinely capable, and the work matters.</p>
-        <a href="https://www.linkedin.com/in/harika-mamidi/" target="_blank" rel="noopener" class="btn">Connect on LinkedIn</a>
+        <p>I love solving problems and building products that turn a profit. The right role is wherever I get to do both.</p>
+        <a href="https://www.linkedin.com/in/harika-mamidi/" target="_blank" rel="noopener" class="btn ext-link">Connect on LinkedIn</a>
     </div>
 </section>
 
 <footer>
     <div class="foot-inner">
         <span>Harika Mamidi / Melbourne, VIC</span>
-        <a href="https://www.linkedin.com/in/harika-mamidi/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/harika-mamidi/" target="_blank" rel="noopener" class="ext-link">LinkedIn</a>
     </div>
 </footer>
 

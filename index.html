@@ -181,6 +181,14 @@ p:last-child { margin-bottom: 0; }
 .role .desc strong { color: var(--head); font-weight: 600; }
 
 /* Case studies strip */
+#cases {
+    background: var(--head);
+    border-top: none;
+    padding: 72px 0;
+}
+#cases .label { color: #8A8378; }
+#cases .cs-line { color: var(--paper); }
+#cases .case-link { color: #D97457; }
 .cs-line {
     font-family: 'Instrument Serif', serif;
     font-size: 26px; line-height: 1.3; color: var(--head);
@@ -202,8 +210,14 @@ p:last-child { margin-bottom: 0; }
 }
 
 /* CTA */
-.cta { border-bottom: none; padding-bottom: 110px; }
-.cta p { font-size: 19px; color: var(--soft); max-width: 520px; margin-bottom: 32px; }
+.cta {
+    border-bottom: none; border-top: none;
+    padding-bottom: 110px;
+    background: var(--head);
+}
+.cta .label { color: #8A8378; }
+.cta h2 { color: var(--paper); }
+.cta p { font-size: 19px; color: #B8B0A4; max-width: 520px; margin-bottom: 32px; }
 .btn {
     display: inline-block; padding: 14px 26px;
     background: var(--accent); color: var(--paper);
@@ -213,7 +227,11 @@ p:last-child { margin-bottom: 0; }
 .btn:hover { background: var(--accent-ink); }
 
 /* Footer */
-footer { border-top: 1px solid var(--line); padding: 26px 0; }
+footer {
+    border-top: 1px solid rgba(252,251,248,0.14);
+    padding: 26px 0;
+    background: var(--head);
+}
 .foot-inner {
     max-width: var(--max); margin: 0 auto; padding: 0 28px;
     display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;

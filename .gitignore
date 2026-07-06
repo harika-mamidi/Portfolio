@@ -2,8 +2,11 @@
 !/.gitignore
 !/index.html
 !/case-studies.html
+!/writing-autonomous-finance.html
+!/favicon.png
 !/images
 /images/*
 !/images/harika-portrait.jpg
 !/images/harika-cutout.png
+!/images/og-card.png
 !/images/case

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autonomous finance, Harika Mamidi</title>
+<meta name="description" content="Autonomous finance: the new era of the finance function. By Harika Mamidi, as published in Credit Management in Australia, July 2022.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Autonomous finance: the new era of the finance function">
+<meta property="og:description" content="By Harika Mamidi, as published in Credit Management in Australia, July 2022.">
+<meta property="og:url" content="https://harikamamid.vercel.app/writing-autonomous-finance.html">
+<meta property="og:image" content="https://harikamamid.vercel.app/images/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    --bg: #F7F5F0;
+    --paper: #FCFBF8;
+    --head: #1A1815;
+    --ink: #2A2620;
+    --soft: #635E55;
+    --muted: #9A948A;
+    --line: #E4DFD4;
+    --line-soft: #ECE8DE;
+    --accent: #C0492A;
+    --accent-ink: #A23B20;
+    --max: 760px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::selection { background: var(--accent); color: var(--paper); }
+
+a { color: var(--accent); text-decoration: none; }
+.ext-link::after { content: "↗"; margin-left: 5px; font-size: 0.9em; }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
+
+nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(247,245,240,0.82);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+    max-width: var(--max); margin: 0 auto; padding: 18px 28px;
+    display: flex; justify-content: space-between; align-items: baseline;
+}
+.brand {
+    font-family: 'Instrument Serif', serif;
+    font-size: 21px; color: var(--head); letter-spacing: 0.01em;
+    white-space: nowrap;
+}
+.nav-links { display: flex; gap: 26px; }
+.nav-links a {
+    font-size: 14px; color: var(--soft); font-weight: 400;
+    transition: color 0.15s;
+}
+.nav-links a:hover { color: var(--accent); }
+
+.intro { padding: 76px 0 8px; }
+.label {
+    font-size: 12px; font-weight: 500; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--muted);
+    margin-bottom: 22px;
+}
+h1 {
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400; color: var(--head);
+    font-size: clamp(34px, 5vw, 52px);
+    line-height: 1.08; margin-bottom: 20px;
+}
+.meta { font-size: 15px; color: var(--soft); letter-spacing: 0.02em; }
+.meta b { color: var(--ink); font-weight: 500; }
+.frame { font-size: 19px; line-height: 1.55; color: var(--soft); font-weight: 300; max-width: 620px; margin-top: 26px; }
+
+.pages { padding: 48px 0 40px; }
+.page {
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+.page img { display: block; width: 100%; height: auto; }
+
+.back { padding: 8px 0 96px; }
+.back a { font-size: 15px; font-weight: 500; }
+
+footer { border-top: 1px solid var(--line); padding: 26px 0; }
+.foot-inner {
+    max-width: var(--max); margin: 0 auto; padding: 0 28px;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    font-size: 13px; color: var(--muted); letter-spacing: 0.04em;
+}
+.foot-inner a { color: var(--muted); }
+.foot-inner a:hover { color: var(--accent); }
+
+@media (max-width: 680px) {
+    .intro { padding: 52px 0 4px; }
+    .pages { padding: 34px 0 28px; }
+    .nav-section { display: none; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="index.html" class="brand">Harika Mamidi</a>
+        <div class="nav-links">
+            <a href="index.html#approach" class="nav-section">Approach</a>
+            <a href="index.html#experience" class="nav-section">Experience</a>
+            <a href="case-studies.html" class="nav-section">Case Studies</a>
+            <a href="https://www.linkedin.com/in/harika-mamidi/" target="_blank" rel="noopener" class="ext-link">LinkedIn</a>
+        </div>
+    </div>
+</nav>
+
+<section class="intro">
+    <div class="wrap">
+        <p class="label">Writing</p>
+        <h1>Autonomous finance: the new era of the finance function.</h1>
+        <p class="meta"><b>Credit Management in Australia</b>, July 2022</p>
+        <p class="frame">Written while I was opening the ANZ market for HighRadius. Making the case in the local trade press was part of the job, product, marketing, and sales in one seat.</p>
+    </div>
+</section>
+
+<section class="pages">
+    <div class="wrap">
+        <div class="page">
+            <img src="images/case/article-p1.jpg" alt="Article page one: Autonomous finance, the new era of finance function, by Harika Mamidi">
+        </div>
+        <div class="page">
+            <img src="images/case/article-p2.jpg" alt="Article page two: value drivers, autonomous receivables, and conclusion">
+        </div>
+    </div>
+</section>
+
+<section class="back">
+    <div class="wrap">
+        <a href="case-studies.html#highradius">&larr; Back to case studies</a>
+    </div>
+</section>
+
+<footer>
+    <div class="foot-inner">
+        <span>Harika Mamidi / Melbourne, VIC</span>
+        <a href="https://www.linkedin.com/in/harika-mamidi/" target="_blank" rel="noopener" class="ext-link">LinkedIn</a>
+    </div>
+</footer>
+
+</body>
+</html>

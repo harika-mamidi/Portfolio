@@ -4,7 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Harika Mamidi, Product Leader</title>
-<meta name="description" content="Product leader. 17 years across healthcare, retail, fintech, and SaaS. Building products and teams for millions of Australians.">
+<meta name="description" content="Product leader. 17 years across insurance, fintech, retail, and care. Building products and teams for millions of Australians.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Harika Mamidi, Product Leader">
+<meta property="og:description" content="Product is the whole equation, not a function. 17 years across insurance, fintech, retail, and care, in both B2B SaaS and B2C.">
+<meta property="og:url" content="https://harikamamid.vercel.app/">
+<meta property="og:image" content="https://harikamamid.vercel.app/images/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -103,7 +113,7 @@ p:last-child { margin-bottom: 0; }
 .hero { padding: 92px 0 100px; }
 .hero-row {
     display: grid; grid-template-columns: 1fr 210px;
-    gap: 48px; align-items: start;
+    gap: 48px; align-items: center;
 }
 .hero-sub {
     font-size: 21px; line-height: 1.55; color: var(--soft);
@@ -118,8 +128,8 @@ p:last-child { margin-bottom: 0; }
 }
 .cutout img {
     display: block; width: 100%; height: auto;
-    -webkit-mask-image: linear-gradient(to bottom, black 82%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 82%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 92%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 92%, transparent 100%);
 }
 
 /* Principles */
@@ -186,6 +196,16 @@ p:last-child { margin-bottom: 0; }
 #cases .label { color: #8A8378; }
 #cases .cs-line { color: var(--paper); }
 #cases .case-link { color: #D97457; }
+.cs-index { margin-top: 26px; }
+.cs-index a {
+    display: block; padding: 14px 0;
+    border-top: 1px solid rgba(252,251,248,0.14);
+    font-family: 'Instrument Serif', serif;
+    font-size: 23px; color: var(--paper);
+    transition: color 0.15s;
+}
+.cs-index a span { color: #D97457; margin-left: 6px; }
+.cs-index a:hover { color: #D97457; }
 .cs-line {
     font-family: 'Instrument Serif', serif;
     font-size: 26px; line-height: 1.3; color: var(--head);
@@ -301,7 +321,7 @@ footer {
         <h2>How I think.</h2>
         <p class="section-intro">Five convictions, and the calls that earned them.</p>
 
-        <details class="principle">
+        <details class="principle" open>
             <summary>
                 <p class="pnum">01</p>
                 <h3>Name the cost of every shortcut.</h3>
@@ -443,7 +463,11 @@ footer {
     <div class="wrap">
         <p class="label">Case studies</p>
         <p class="cs-line">Three pieces of work, a level below the resume.</p>
-        <a href="case-studies.html" class="case-link">Read the case studies &rarr;</a>
+        <div class="cs-index">
+            <a href="case-studies.html#hayylo">The app I saved, then paused. <span>&rarr;</span></a>
+            <a href="case-studies.html#bupa">Don't migrate what no longer matters. <span>&rarr;</span></a>
+            <a href="case-studies.html#highradius">One seat, a whole market. <span>&rarr;</span></a>
+        </div>
     </div>
 </section>
 

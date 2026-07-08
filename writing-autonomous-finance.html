@@ -75,6 +75,8 @@ nav {
     transition: color 0.15s;
 }
 .nav-links a:hover { color: var(--accent); }
+.nav-toggle { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); }
+.nav-burger { display: none; }
 
 .intro { padding: 76px 0 8px; }
 .label {
@@ -116,7 +118,16 @@ footer { border-top: 1px solid var(--line); padding: 26px 0; }
 @media (max-width: 680px) {
     .intro { padding: 52px 0 4px; }
     .pages { padding: 34px 0 28px; }
-    .nav-section { display: none; }
+    .nav-inner { position: relative; }
+    .nav-burger { display: flex; flex-direction: column; justify-content: space-between; width: 26px; height: 16px; cursor: pointer; }
+    .nav-burger span { display: block; height: 2px; width: 100%; background: var(--head); border-radius: 2px; transition: transform 0.2s ease, opacity 0.2s ease; }
+    .nav-links { position: absolute; top: calc(100% + 1px); left: 0; right: 0; display: none; flex-direction: column; align-items: flex-start; gap: 0; background: var(--bg); border-bottom: 1px solid var(--line); padding: 4px 28px 14px; }
+    .nav-toggle:checked ~ .nav-links { display: flex; }
+    .nav-links a { display: block; padding: 12px 0; font-size: 16px; width: 100%; }
+    .nav-section { display: block; }
+    .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+    .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 }
 </style>
 </head>
@@ -125,6 +136,8 @@ footer { border-top: 1px solid var(--line); padding: 26px 0; }
 <nav>
     <div class="nav-inner">
         <a href="index.html" class="brand">Harika Mamidi</a>
+        <input type="checkbox" id="navcb" class="nav-toggle" aria-label="Open menu">
+        <label for="navcb" class="nav-burger" aria-hidden="true"><span></span><span></span><span></span></label>
         <div class="nav-links">
             <a href="index.html#approach" class="nav-section">Approach</a>
             <a href="index.html#experience" class="nav-section">Experience</a>

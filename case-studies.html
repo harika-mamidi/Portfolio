@@ -76,6 +76,8 @@ nav {
     transition: color 0.15s;
 }
 .nav-links a:hover { color: var(--accent); }
+.nav-toggle { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); }
+.nav-burger { display: none; }
 
 /* Sections */
 section { padding: 84px 0; border-top: 1px solid var(--line); }
@@ -190,7 +192,16 @@ footer { border-top: 1px solid rgba(252,251,248,0.14); padding: 26px 0; backgrou
     .intro { padding: 56px 0 60px; }
     .metrics { gap: 26px; }
     .metric b { font-size: 28px; }
-    .nav-section { display: none; }
+    .nav-inner { position: relative; }
+    .nav-burger { display: flex; flex-direction: column; justify-content: space-between; width: 26px; height: 16px; cursor: pointer; }
+    .nav-burger span { display: block; height: 2px; width: 100%; background: var(--head); border-radius: 2px; transition: transform 0.2s ease, opacity 0.2s ease; }
+    .nav-links { position: absolute; top: calc(100% + 1px); left: 0; right: 0; display: none; flex-direction: column; align-items: flex-start; gap: 0; background: var(--bg); border-bottom: 1px solid var(--line); padding: 4px 28px 14px; }
+    .nav-toggle:checked ~ .nav-links { display: flex; }
+    .nav-links a { display: block; padding: 12px 0; font-size: 16px; width: 100%; }
+    .nav-section { display: block; }
+    .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+    .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     .case-box { grid-template-columns: 1fr; padding: 26px; gap: 28px; }
     .phone { max-width: 240px; margin: 0 auto; }
     .tearsheet { max-width: 230px; margin: 0 auto; }
@@ -202,6 +213,8 @@ footer { border-top: 1px solid rgba(252,251,248,0.14); padding: 26px 0; backgrou
 <nav>
     <div class="nav-inner">
         <a href="index.html" class="brand">Harika Mamidi</a>
+        <input type="checkbox" id="navcb" class="nav-toggle" aria-label="Open menu">
+        <label for="navcb" class="nav-burger" aria-hidden="true"><span></span><span></span><span></span></label>
         <div class="nav-links">
             <a href="index.html#about" class="nav-section">About</a>
             <a href="index.html#approach" class="nav-section">Approach</a>
@@ -252,7 +265,7 @@ footer { border-top: 1px solid rgba(252,251,248,0.14); padding: 26px 0; backgrou
                     <div class="metric"><b>+300% YoY</b><span>Digital traffic</span></div>
                     <div class="metric"><b>$1M+</b><span>Operational savings</span></div>
                 </div>
-                <p class="sum">Four million members, a dated estate, and a like-for-like brief. Once I had earned the trust, I reframed it: don't migrate what no longer matters. Rebuilt the website and app on new technology, and gave members visibility of their remaining benefits. That work was nominated for Bupa's global awards.</p>
+                <p class="sum">4 million members, a dated estate, and a like-for-like brief. Once I had earned the trust, I reframed it: don't migrate what no longer matters. Rebuilt the website and app on new technology, and gave members visibility of their remaining benefits. That work was nominated for Bupa's global awards.</p>
             </div>
             <div class="phone">
                 <img src="images/case/mybupa-phone.png" alt="myBupa app extras usage screen in an iPhone, showing remaining benefit limits by category">
@@ -267,14 +280,14 @@ footer { border-top: 1px solid rgba(252,251,248,0.14); padding: 26px 0; backgrou
         <div class="case-box">
             <div>
                 <p class="cnum">03</p>
-                <p class="label">HighRadius / US Fintech / 2022 — 2024</p>
-                <h2>One seat, a whole market.</h2>
+                <p class="label">HighRadius / 2022 — 2024</p>
+                <h2>I was the US fintech unicorn's entire ANZ launch.</h2>
                 <div class="metrics">
                     <div class="metric"><b>$530K</b><span>Closed, full price</span></div>
                     <div class="metric"><b>$1M+</b><span>At budget approval</span></div>
                     <div class="metric"><b>2 years</b><span>Market from zero</span></div>
                 </div>
-                <p class="sum">Rehired nine years after my first stint to open ANZ from zero: one seat across product, marketing, and sales. I held full price on the market's first deal against internal pressure to discount, and read the region's pace against imported targets. The buyers I left at budget approval called me after I had gone, and closed.</p>
+                <p class="sum">Rehired 9 years after my first stint to open ANZ from zero: one seat across product, marketing, and sales. I held full price on the market's first deal against internal pressure to discount, and read the region's pace against imported targets. The buyers I left at budget approval called me after I had gone, and closed.</p>
                 <a class="case-note" href="writing-autonomous-finance.html">Read my article, published in Credit Management in Australia &rarr;</a>
             </div>
             <a class="tearsheet" href="writing-autonomous-finance.html">

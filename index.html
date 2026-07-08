@@ -76,6 +76,8 @@ nav {
     transition: color 0.15s;
 }
 .nav-links a:hover { color: var(--accent); }
+.nav-toggle { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); }
+.nav-burger { display: none; }
 
 /* Sections */
 section { padding: 96px 0; border-top: 1px solid var(--line); }
@@ -265,8 +267,16 @@ footer {
     .cutout { max-width: 260px; margin: 0 auto; }
     .role { grid-template-columns: 1fr; gap: 6px; }
     .role .yr { padding-top: 0; }
-    .nav-links { gap: 18px; }
-    .nav-section { display: none; }
+    .nav-inner { position: relative; }
+    .nav-burger { display: flex; flex-direction: column; justify-content: space-between; width: 26px; height: 16px; cursor: pointer; }
+    .nav-burger span { display: block; height: 2px; width: 100%; background: var(--head); border-radius: 2px; transition: transform 0.2s ease, opacity 0.2s ease; }
+    .nav-links { position: absolute; top: calc(100% + 1px); left: 0; right: 0; display: none; flex-direction: column; align-items: flex-start; gap: 0; background: var(--bg); border-bottom: 1px solid var(--line); padding: 4px 28px 14px; }
+    .nav-toggle:checked ~ .nav-links { display: flex; }
+    .nav-links a { display: block; padding: 12px 0; font-size: 16px; width: 100%; }
+    .nav-section { display: block; }
+    .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+    .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     .hero-sub { font-size: 19px; }
 }
 </style>
@@ -276,6 +286,8 @@ footer {
 <nav>
     <div class="nav-inner">
         <a href="#top" class="brand">Harika Mamidi</a>
+        <input type="checkbox" id="navcb" class="nav-toggle" aria-label="Open menu">
+        <label for="navcb" class="nav-burger" aria-hidden="true"><span></span><span></span><span></span></label>
         <div class="nav-links">
             <a href="#about" class="nav-section">About</a>
             <a href="#approach" class="nav-section">Approach</a>
@@ -358,7 +370,7 @@ footer {
                 <p>Data tells you what happened, not why. The job is to find the actual cause, even when the surface reading is easier to act on.</p>
                 <div class="evidence">
                     <span class="tag">In practice</span>
-                    <p>Leading HighRadius's ANZ market entry, the numbers read as underperformance against US and EU targets. The real cause was different: enterprise cycles in a new market run longer. I closed <strong>$530K revenue ($300K ARR)</strong> solo, and the <strong>$1M+ ($750K ARR)</strong> I left at budget approval closed after I'd gone. The surface number and the real story were never the same thing.</p>
+                    <p>I stopped a major release at Hayylo that would have put the business at real risk, because it was built on <strong>correlation mistaken for causation</strong>. The data showed customers almost never moved a booking more than two days out, so a release was queued to cap date selection at two days ahead. But that pattern wasn't demand: providers were cancelling any change further out and rebuilding the schedule from scratch, so the number described a workaround, not a need. Shipping it would have broken the core booking flow for every customer on the platform.</p>
                 </div>
             </div>
         </details>
@@ -369,10 +381,10 @@ footer {
                 <h3>Strategy is what people decide when you're not in the room.</h3>
             </summary>
             <div class="pbody">
-                <p>A strategy that lives in a deck is decoration. The test is whether an engineer, a designer, and a PM, none of them in your meetings, make the same call you would have made. That takes a north star people can use, not admire.</p>
+                <p>A strategy that lives in a deck is decoration. The test is whether an engineer, a designer, and a PM, none of them in your meetings, make the same call you would have made. That takes a plan people can use, not admire.</p>
                 <div class="evidence">
                     <span class="tag">In practice</span>
-                    <p>At WooliesX I led a <strong>100-person</strong> mobile org. The north star was one line: make mobile the front door to Woolworths. It changed how squads prioritised, how the business allocated resources, and how <strong>10 PMs</strong> grew from a BA mindset into genuine owners. Scan &amp; Pay launched at scale on that spine.</p>
+                    <p>At WooliesX I built the portfolio prioritisation that decided where investment went: every initiative ranked against the others, no ties, pressure-tested with data until leadership owned the same priorities. With that in place, people could make the call I'd have made without me in the room.</p>
                 </div>
             </div>
         </details>
@@ -466,7 +478,7 @@ footer {
         <div class="cs-index">
             <a href="case-studies.html#hayylo">Hired to grow. I pulled the brakes. <span>&rarr;</span></a>
             <a href="case-studies.html#bupa">Don't migrate what no longer matters. <span>&rarr;</span></a>
-            <a href="case-studies.html#highradius">One seat, a whole market. <span>&rarr;</span></a>
+            <a href="case-studies.html#highradius">I was the US fintech unicorn's entire ANZ launch. <span>&rarr;</span></a>
         </div>
     </div>
 </section>
